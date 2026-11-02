@@ -1,3 +1,4 @@
+import sys
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Annotated, Any, cast
@@ -7,9 +8,15 @@ from pydantic.json_schema import JsonSchemaValue
 from pydantic.types import StringConstraints
 from pydantic_core import CoreSchema, PydanticCustomError, core_schema
 
-SerialPort = Annotated[
-    str, StringConstraints(pattern=r"^(?:COM\d+|/dev/ttyUSB\d+)$", to_lower=False)
-]
+match sys.platform:
+    case "win32":
+        SerialPort = Annotated[
+            str, StringConstraints(pattern=r"^COM[1-9]\d+$", to_lower=False)
+        ]
+    case _:
+        SerialPort = Annotated[
+            str, StringConstraints(pattern=r"^/dev/ttyUSB\d+$", to_lower=False)
+        ]
 
 
 @dataclass
