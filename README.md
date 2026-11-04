@@ -1,6 +1,6 @@
-# task-utils
+# task-toolkit
 
-This repository contains the code for the `task-utils` Python package that can be used to aid the development of Bonsai projects.
+This repository contains the code for the `task-toolkit` Python package that can be used to aid the development of Bonsai projects.
 
 The package is divided into 2 modules:
 
@@ -8,7 +8,7 @@ The package is divided into 2 modules:
 - `gui` - helper code for the development of GUIs for behavioral tasks.
 
 > [!NOTE]
-> The code from the file `./src/task_utils/sgen/_utils.py` was adapted from [this code](https://github.com/bonsai-rx/conference/blob/2024/_topics/08-reproducible-research-practices/src/python/_utils.py) written by Bruno Cruz.
+> The code from the file `./src/tt/sgen/_utils.py` was adapted from [this code](https://github.com/bonsai-rx/conference/blob/2024/_topics/08-reproducible-research-practices/src/python/_utils.py) written by Bruno Cruz.
 
 ## Installation
 > [!WARNING]
@@ -16,4 +16,4 @@ The package is divided into 2 modules:
 
 ## Documentation
 
-Click [here](https://zegcricket.github.io/task-utils/) to go to the documentation.
+Click [here](https://zegcricket.github.io/task-toolkit/) to go to the documentation.
